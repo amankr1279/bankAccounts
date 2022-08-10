@@ -1,0 +1,13 @@
+<div class="container m-5">
+<p style="color: green"><%= notice %></p>
+
+<%= render @account %>
+
+<div>
+  <%= link_to "Edit this account", edit_account_path(@account) %> |
+  <%= link_to "Back to accounts", accounts_path %>
+
+  <p>  </p>
+  <%= button_to "Destroy this account", @account, method: :delete %>
+</div>
+</div>
