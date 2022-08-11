@@ -8,14 +8,16 @@
             <th scope = "col" > Id </th>
             <th scope = "col" > User </th>
             <th scope = "col" > Balance </th>
+            <th scope = "col" > Details </th>
         </tr>
     </thead>
     <tbody>
         <% @accnts.each do |accnt| %>
             <tr>
                 <th scope="row" > <%= accnt.id %> </th>
-                <td> <%= link_to accnt.user.email, admin_account_path(accnt) %> </td>
+                <td> <%= accnt.user.email %> </td>
                 <td>  <%= accnt.balance %> </td>
+                <td> <%= link_to "More Info", admin_account_path(accnt) %> </td>
             </tr>
         <%end%>
     </tbody>

@@ -9,15 +9,17 @@
             <th scope = "col" > Email </th>
             <th scope = "col" > Status </th>
             <th scope = "col" > Accounts </th>
+            <th scope = "col" > Details </th>
         </tr>
     </thead>
     <tbody>
         <% @users.each do |user| %>
             <tr>
                 <th scope="row" > <%= user.id %> </th>
-                <td> <%= link_to user.email, admin_user_path(user) %> </td>
+                <td> <%= user.email %> </td>
                 <td> <%= user.role %> </td>     
                 <td>  <%= user.accounts.size %> </td>
+                <td> <%= link_to "More Info", admin_user_path(user) %> </td>
             </tr>
         <%end%>
     </tbody>

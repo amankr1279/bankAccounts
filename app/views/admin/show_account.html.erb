@@ -14,4 +14,11 @@
         <li class = 'list-group-item' > Updated at : <%= @accnt.updated_at %></li>
     </ul>  
 </p>
+
+<h2> Actions:- <h2>
+
+  <%= link_to "Edit", edit_account_path(@accnt), class:"btn btn-info" %>
+  
+  <%= button_to "Delete", @accnt, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-danger" %>
+
 </div>
