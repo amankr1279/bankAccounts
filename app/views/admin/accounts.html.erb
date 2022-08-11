@@ -1,0 +1,23 @@
+<h1>Admin#accounts</h1>
+<p>Find me in app/views/admin/accounts.html.erb</p>
+
+<div class = "container m-5" >
+    <table class="table table-striped table-hover">
+    <thead>
+        <tr> 
+            <th scope = "col" > Id </th>
+            <th scope = "col" > User </th>
+            <th scope = "col" > Balance </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @accnts.each do |accnt| %>
+            <tr>
+                <th scope="row" > <%= accnt.id %> </th>
+                <td> <%= link_to accnt.user.email, admin_account_path(accnt) %> </td>
+                <td>  <%= accnt.balance %> </td>
+            </tr>
+        <%end%>
+    </tbody>
+    </table>
+</div>

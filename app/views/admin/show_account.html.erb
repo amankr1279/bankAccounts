@@ -1,0 +1,17 @@
+<div class = "container m-5" >
+<h1>Admin#show_account</h1>
+<p>Find me in app/views/admin/show_account.html.erb</p>
+
+<p class="lead">
+  This account belongs to <%= @accnt.user.email %>
+</p>
+
+<p>
+    Current Information:-
+    <ul class = 'list-group' >
+        <li class = 'list-group-item' > Balance : <%= @accnt.balance %></li>
+        <li class = 'list-group-item' > Created at : <%= @accnt.created_at %></li>
+        <li class = 'list-group-item' > Updated at : <%= @accnt.updated_at %></li>
+    </ul>  
+</p>
+</div>

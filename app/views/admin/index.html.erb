@@ -1,0 +1,18 @@
+<%
+=begin%>
+ <h1>Admin#index</h1>
+<p>Find me in app/views/admin/index.html.erb</p> 
+<%
+=end%>
+<%= stylesheet_link_tag "/assets/stylesheets/admin_index.css" %> 
+<div class="container" >
+    <h1 class="text-center mt-5" > Admin Page </h1> 
+
+    <div class = "box"> 
+        <ul class = 'list-group' >
+        <li class = 'list-group-item' > <%= link_to "Accounts", admin_accounts_path %></li>
+        <li class = 'list-group-item' > <%= link_to "Users", admin_users_path %></li>
+
+        </ul>  
+    </div>    
+</div>

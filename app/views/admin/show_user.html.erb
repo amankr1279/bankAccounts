@@ -1,0 +1,14 @@
+<div class = "container m-5" >
+<p class="lead">
+  This account belongs to <%= @user.email %>
+</p>
+
+<p>
+    Current Information:-
+    <ul class = 'list-group' >
+        <li class = 'list-group-item' > Accounts : <%= @user.accounts.size %></li>
+        <li class = 'list-group-item' > Created at : <%= @user.created_at %></li>
+        <li class = 'list-group-item' > Updated at : <%= @user.updated_at %></li>
+    </ul>  
+</p>
+</div>
